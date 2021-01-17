@@ -1,15 +1,15 @@
+@import "App";
 $main-color: #14dc89;
 
 .App {
   text-align: center;
-}
-
-.App-logo {
+  .App-logo {
   height: 40vmin;
   pointer-events: none;
+  &::selection{
+    background-color: $main-color;
+  }
 }
-.App-logo::selection {
-  background: $main-color;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -17,23 +17,9 @@ $main-color: #14dc89;
     animation: App-logo-spin infinite 20s linear;
   }
 }
-.App p::selection{
-  background-color: $main-color;
-}
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+
+
 
 @keyframes App-logo-spin {
   from {
