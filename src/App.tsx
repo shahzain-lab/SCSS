@@ -19,6 +19,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <div className="box"></div>
+      <div className="cotton"></div>
     </div>
   );
 }

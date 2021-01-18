@@ -1,6 +1,20 @@
 @import "App";
-$main-color: #14dc89;
 
+@mixin str (){
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  width: 200px;
+  height: 200px;
+  background-color: $main-color;
+}
+@mixin postion($value) {
+  position: absolute;
+  top: $value;
+  left: $value;
+}
+
+$main-color: #14dc89;
 .App {
   text-align: center;
   .App-logo {
@@ -18,8 +32,10 @@ $main-color: #14dc89;
   }
 }
 
-
-
+.box{
+  @include str();
+  @include postion(20%)
+}
 
 @keyframes App-logo-spin {
   from {
