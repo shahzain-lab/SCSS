@@ -11,6 +11,20 @@ export const Header = () => {
                  placeholder="Enter Email"
                />
                <button>Submit</button>
+              <div className="headGrid">
+                 <div className="one">
+                     <h3>SEO</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                 </div>
+                 <div className="two">
+                     <h3>Branding</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                 </div>
+                 <div className="three">
+                     <h3>Design</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                 </div>
+              </div>
             </div>
         </div>
     )

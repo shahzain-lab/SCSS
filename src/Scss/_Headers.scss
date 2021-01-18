@@ -1,7 +1,14 @@
 @mixin  BG($val) {
     background: $val;
 }
-
+@mixin  Color($val) {
+    color: $val;
+}
+@mixin display($content){
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+}
 @mixin box($width,$height) {
      width: $width;
      height: $height;
@@ -11,16 +18,18 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-// @mixin display($content){
-//     display: flex;
-//     justify-content: $content;
-//     align-items: center;
-// }
 @mixin  position {
     position: absolute;
     top: 50%;
     left: 50%; 
     transform: translate(-50% , -50%);
+}
+@mixin  fontSize($val) {
+    font-size: $val;
+}
+@mixin group($border,$padd) {
+    border-radius: $border;
+    padding: $padd;
 }
 
 .Header{
@@ -29,14 +38,56 @@
    .headTag{
     @include box(60vw,60vh);
     @include BG(black);
-    opacity: .4;
+    opacity: .6;
     @include position();
+    border-radius: 1.2rem;
+    text-align: center;
     h3{
         color: #dbdbdb;
         text-transform: uppercase;
+        @include fontSize(1.4rem);
+        margin: 2rem 0;
     }
     p{
+        @include fontSize(1.2rem);
         @extend h3;
+    }
+    input{
+     @include group(.6rem, .6rem 2rem);
+     margin:2rem 0;
+    }
+    button{
+        @include fontSize(1rem);
+        @include group(.6rem,.5rem 2rem);
+        cursor: pointer;
+        @include Color(#e4e4e4);
+        @include BG(#006eff);
+        transition: .2s; 
+        &:hover{
+          @include BG(#ffff);
+          @include Color(#006eff)
+        }
+    }
+    .headGrid{
+        @include display(space-around);
+        
+        .one{
+            border: 2px solid silver;
+            @include BG(gray);
+            @include group(.6rem, 0 1rem);
+            margin: 0 1rem;
+        }
+            .two, .three{
+            @extend .one;
+        }
+        
+        h3{
+            @include Color(rgb(0, 0, 0));
+            @include fontSize(1rem)
+        }
+        p{
+            @include fontSize(.6rem)
+        }
     }
    }
 }
