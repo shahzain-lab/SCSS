@@ -1,18 +1,19 @@
 @import "App";
 
-@mixin str (){
+@mixin str ($top, $left, $bottom, $right){
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   border-radius: 1rem;
   width: 200px;
   height: 200px;
   background-color: $main-color;
-}
-@mixin postion($value) {
   position: absolute;
-  top: $value;
-  left: $value;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
 }
+
 
 $main-color: #14dc89;
 .App {
@@ -33,10 +34,11 @@ $main-color: #14dc89;
 }
 
 .box{
-  @include str();
-  @include postion(20%)
+  @include str(20%, 20%, 0, 0);
 }
-
+.cotton{
+ @include str(0, 0, 20%, 20%)
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

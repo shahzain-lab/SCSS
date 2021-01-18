@@ -1,4 +1,8 @@
 $main-color: #333;
+@mixin fonSize($size, $unit) {
+     font-#{$size}: $unit + px;
+}
+
 .App-header {
     background-color: #282c34;
     min-height: 100vh;
@@ -11,6 +15,9 @@ $main-color: #333;
   }.App-link {
     color: #61dafb;
   }
-   p::selection {
+  p{
+      @include fonSize(size, 40);
+   &::selection {
      background-color: $main-color;
   }
+}
