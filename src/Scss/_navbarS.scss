@@ -1,0 +1,28 @@
+$BGNav: #e7e7e7;
+
+@mixin display($content){
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+}
+@mixin width($width) {
+    width: $width;
+}
+.Navbar{
+    position: fixed;
+    nav{
+        @include width(100vw);
+        background-color: $BGNav;
+        @include display(space-between);
+        ul{
+           @include display(space-around);
+           @include width(50vw);
+           .active{
+               color: rgb(255, 179, 0);
+           }
+           li{
+               cursor: pointer;
+           } 
+        }
+    }
+}

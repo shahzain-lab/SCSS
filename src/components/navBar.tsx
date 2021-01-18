@@ -8,7 +8,7 @@ export const NavBar =() => {
                <img src={logo} alt="logo" width="7%"/>
 
                <ul>
-                   <li>Home</li>
+                   <li className="active">Home</li>
                    <li>About</li>
                    <li>Services</li>
                    <li>Blogs</li>
