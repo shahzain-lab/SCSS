@@ -21,6 +21,7 @@ function App() {
       </header>
       <div className="box"></div>
       <div className="cotton"></div>
+      <GridScss />
     </div>
   );
 }

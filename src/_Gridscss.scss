@@ -1,0 +1,41 @@
+$container-width : 100vw;
+$con-height: 300 +px;
+$background-color: crimson;
+
+@mixin con {
+    width: $container-width;
+    height: $con-height;
+}
+@mixin borderRadius ($value, $border, $solid, $color) {
+     border-radius: $value;
+     border:$border, $solid, $color;
+}
+@function grid($width){
+    @return width/2 + vw;
+}
+@mixin display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin one($val) {
+    height:$val ; 
+}
+@mixin bgColor($pro) {
+    background-color: $pro;
+}
+
+.cntainer{
+   @include con();
+   @include borderRadius(1rem, 2px,solid ,rgb(22, 22, 22) );
+   @include bgColor($background-color);
+   @include display();
+   .one{
+    width: grid($container-width);
+    @include bgColor(#333);
+    @include one(100%)
+  }
+  .two, .three{
+      @extend .one;
+  }
+}
