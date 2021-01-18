@@ -1,4 +1,4 @@
-$BGNav: #e7e7e7;
+$BGNav: #eceaea;
 
 @mixin display($content){
     display: flex;
@@ -10,7 +10,12 @@ $BGNav: #e7e7e7;
 }
 .Navbar{
     position: fixed;
+    border-radius: 1.2rem;
+    opacity: .6;
     nav{
+        img{
+            padding:.5rem 1rem;
+        }
         @include width(100vw);
         background-color: $BGNav;
         @include display(space-between);
@@ -18,7 +23,8 @@ $BGNav: #e7e7e7;
            @include display(space-around);
            @include width(50vw);
            .active{
-               color: rgb(255, 179, 0);
+               color: #fbff00;
+               border-bottom: 2px solid #fbff00;
            }
            li{
                cursor: pointer;

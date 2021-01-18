@@ -1,0 +1,23 @@
+@mixin  BG($val) {
+    background: $val;
+}
+
+@mixin box($width,$height) {
+     min-width: $width;
+     min-height: $height;
+}
+@mixin img($url) {
+    background-image: $url;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.Header{
+   @include box(100vw,100vh);
+   @include img(url(../images/businessBG.jpg));
+   .headTag{
+    @include box(50vw,40vh);
+    @include BG(black);
+    opacity: .4;
+   }
+}
